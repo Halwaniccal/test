@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+html{
+    font-family: "Roboto Lt", sans-serif;
+    font-size: 10px;
+}
+
+header{
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-toggle{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    display: none;
+    z-index: 999;
+}
+
+.menu-toggle, .fa-times{
+    font-size: 3.5rem;
+    color: green;
+}
+
+.fa-times{
+    display: none;
+    cursor: pointer;
+}
+
+nav{
+    position: relative;
+    background: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    z-index: 1000;
+}
+
+.logo{
+    width: 15rem;
+    box-sizing: content-box;
+    padding-left: 3rem;
+}
+
+.logo img{
+    display: block;
+    width: 100%;
+}
+
+nav ul{
+    height: 8rem;
+    list-style: none;
+    display: flex;
+    font-size: 1rem;
+}
+
+nav ul li{
+    padding: 0 2rem;
+    line-height: 8rem;
+    transition: background-color .5s, color .5s;
+}
+
+nav ul li:hover{
+    background-color: white;
+}
+
+nav ul li a:hover{
+    color: green;
+}
+
+.nav-middle{
+    margin: 0 6rem;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown.active > .link1 + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown.active > .link2 + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown.active > .link,
+.link:hover:hover {
+  color: black;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + .25rem);
+    background-color: green;
+    padding: 1rem 3.5rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.information-grid {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem;
+}
+
+.dropdown-links {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.link {
+  background: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: green;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 1rem 3rem;
+}
+
+.login-form > input {
+  margin-bottom: .5rem;
+}
+
+.nav-right ul li{
+    border-right: 1px solid white;
+}
+.nav-right ul li a{
+    margin-right: .3rem;
+}
+
+.nav-right ul li:nth-child(1){
+    border-left: 1px solid white;
+}
+
+.nav-right ul li:last-child{
+    border-right: none;
+}
+
+.nav-right i{
+    font-size: medium;
+}
+
+.nav-right i:first-child{
+    margin-right: 0;
+}
+
+.proposal{
+    margin: 5rem 5rem;
+}
+
+.proposal-content h2{
+    text-decoration: underline;
+    font-size: 4rem;
+    font-weight: bold;
+    color: green;
+    padding-bottom: 1.5rem;
+}
+
+.proposal-content h3{
+    margin-top: 2rem;
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: bold;
+    color: green;
+    padding-bottom: 1.5rem;
+}
+
+.proposal-content p{
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+    padding-bottom: 1rem;
+}
+
+.proposal-content p a{
+    color: blue;
+}
+
+@media screen and (max-width:1200px) {
+    .tone-2 img{
+        left: -8rem;
+    }
+
+    .product-info h1{
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-info p{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn{
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .logo{
+        padding-left: 1.5rem;
+    }
+
+    nav ul{
+        height: 5rem;
+        font-size: 1.4rem;
+    }
+
+    nav ul li{
+        padding: 0 1.5rem;
+        line-height: 5rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .product-info p{
+        font-size: 1.2rem;
+    }
+
+    .btn{
+        padding: 1rem;
+    }
+
+    nav{
+        display: flex;
+        border-bottom: none;
+        flex-direction: column;
+        width: 25rem;
+        height: 100vh;
+        background-color: green;
+        justify-content: space-evenly;
+        transform: translateX(-25rem);
+        transition: transform .5s ;
+    }
+
+    nav ul{
+        height: initial;
+        display: block;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    nav ul li{
+        padding: 0;
+        color: white;
+        line-height: initial;
+        margin-bottom: 2rem;
+    }
+
+    .logo{
+        padding: 0;
+    }
+
+    .nav-right ul li, .nav-right ul li:first-child(1){
+        border: none;
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    .fa-times{
+        display: block;
+        position: absolute;
+        color: white;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .active{
+        transform: translateX(0);
+    }
+
+    .overlay{
+        position: absolute;
+        width: 0;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .8);
+        z-index: 998;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    .overlay.menu-open{
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .product-info h1{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .product-info p{
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn{
+        padding: .7rem;
+        font-size: .8rem;
+    }
+}

@@ -11,7 +11,7 @@ html {
 
 header {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   position: relative;
 }
 
@@ -35,7 +35,7 @@ header {
 }
 
 #bootstrap-overrides .menu-toggle,
-.fa-times {
+#bootstrap-overrides.fa-times {
   font-size: 3.5rem;
   color: green;
 }
@@ -82,6 +82,33 @@ header {
 #bootstrap-overrides nav ul li:hover {
   background-color: rgba(0, 0, 0, 0.075);
 }
+#bootstrap-overrides nav ul li a:hover {
+  color: green;
+}
+#bootstrap-overrides .dropdown {
+  position: relative;
+}
+
+#bootstrap-overrides .nav-middle {
+  margin: 0 6rem;
+}
+#bootstrap-overrides .dropdown.active > .link1 + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#bootstrap-overrides .dropdown.active > .link2 + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#bootstrap-overrides .dropdown.active > .link3 + .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
 #bootstrap-overrides .link {
   background: none;
@@ -97,10 +124,6 @@ header {
 #bootstrap-overrides .dropdown.active > .link,
 #bootstrap-overrides .link:hover {
   color: black;
-}
-
-#bootstrap-overrides .dropdown {
-  position: relative;
 }
 
 #bootstrap-overrides .dropdown-menu {
@@ -317,7 +340,37 @@ header {
   box-shadow: 3px 1rem 2rem rgba(0, 0, 0, 0.3);
   transform: translateY(-1rem);
 }
+#bootstrap-overrides .about {
+  display: flex;
+  position: relative;
+  margin: 5rem 5rem;
+}
 
+#bootstrap-overrides .about-img {
+  flex: 1;
+}
+
+#bootstrap-overrides .about-content {
+  flex: 1;
+}
+#bootstrap-overrides .about-content h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: green;
+  padding-bottom: 1.5rem;
+}
+
+#bootstrap-overrides .about-content p {
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  padding-bottom: 1.5rem;
+}
+
+#bootstrap-overrides .about-content button {
+  background-color: green;
+  color: white;
+  padding: 1rem;
+}
 @media screen and (max-width: 1200px) {
   #bootstrap-overrides .tone-2 img {
     left: -8rem;
