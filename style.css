@@ -1,89 +1,89 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-transform: uppercase;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+html {
+  font-family: "Roboto Lt", sans-serif;
+  font-size: 10px;
 }
 
-html{
-    font-family: "Roboto Lt", sans-serif;
-    font-size: 10px;
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
-header{
-    width: 100%;
-    height: 100vh;
-    position: relative;
+#bootstrap-overrides a {
+  text-decoration: none;
+  color: white;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+#bootstrap-overrides .menu-toggle {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  z-index: 999;
 }
 
-.menu-toggle{
-    width: 5rem;
-    height: 5rem;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    outline: none;
-    display: none;
-    z-index: 999;
+#bootstrap-overrides .menu-toggle,
+.fa-times {
+  font-size: 3.5rem;
+  color: green;
 }
 
-.menu-toggle, .fa-times{
-    font-size: 3.5rem;
-    color: green;
+#bootstrap-overrides .fa-times {
+  display: none;
+  cursor: pointer;
 }
 
-.fa-times{
-    display: none;
-    cursor: pointer;
+#bootstrap-overrides nav {
+  position: relative;
+  background: green;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  z-index: 1000;
 }
 
-nav{
-    position: relative;
-    background: green;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid white;
-    z-index: 1000;
+#bootstrap-overrides .logo {
+  width: 15rem;
+  box-sizing: content-box;
+  padding-left: 3rem;
 }
 
-.logo{
-    width: 15rem;
-    box-sizing: content-box;
-    padding-left: 3rem;
+#bootstrap-overrides .logo img {
+  display: block;
+  width: 100%;
 }
 
-.logo img{
-    display: block;
-    width: 100%;
+#bootstrap-overrides nav ul {
+  height: 8rem;
+  list-style: none;
+  display: flex;
+  font-size: 1.6rem;
 }
 
-nav ul{
-    height: 8rem;
-    list-style: none;
-    display: flex;
-    font-size: 1.6rem;
+#bootstrap-overrides nav ul li {
+  padding: 0 2rem;
+  line-height: 8rem;
+  transition: background-color 0.5s;
 }
 
-nav ul li{
-    padding: 0 2rem;
-    line-height: 8rem;
-    transition: background-color .5s;
+#bootstrap-overrides nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.075);
 }
 
-nav ul li:hover{
-    background-color: rgba(0, 0, 0, .075);
-}
-
-.link {
+#bootstrap-overrides .link {
   background: none;
   border: none;
   text-decoration: none;
@@ -94,58 +94,89 @@ nav ul li:hover{
   padding: 0;
 }
 
-.dropdown.active > .link,
-.link:hover {
+#bootstrap-overrides .dropdown.active > .link,
+#bootstrap-overrides .link:hover {
   color: black;
 }
 
-.dropdown {
+#bootstrap-overrides .dropdown {
   position: relative;
 }
 
-.dropdown-menu {
-    position: absolute;
-    left: 0;
-    top: calc(100% + .25rem);
-    background-color: white;
-    padding: .75rem;
-    border-radius: .25rem;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+#bootstrap-overrides .dropdown-menu {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 
-.dropdown.active > .link + .dropdown-menu {
+#bootstrap-overrides .dropdown.active > .link + .dropdown-menu {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-.information-grid {
+#bootstrap-overrides .information-grid {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   gap: 2rem;
 }
 
-.dropdown-links {
+#bootstrap-overrides .dropdown-links {
   display: flex;
   flex-direction: column;
-  gap: .25rem;
+  gap: 0.25rem;
 }
 
-.login-form > input {
-  margin-bottom: .5rem;
+#bootstrap-overrides .login-form > input {
+  margin-bottom: 0.5rem;
 }
+.btn__icon {
+  font-size: 5em;
+  color: green;
+  margin-top: 0.2em;
+  animation: float 0.5s infinite ease;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
 
+  50% {
+    transform: translateY(0.5rem);
+    -webkit-transform: translateY(0.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+}
+#bootstrap-overrides .double-down-arrow {
+  margin-top: inherit;
+  margin-bottom: 100px;
+}
+#bootstrap-overrides .product-description {
+  margin-block-start: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 /* .dropdown {
     position: relative;
     overflow: hidden;
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px;
   border: none;
   outline: none;
   color: white;
@@ -181,232 +212,238 @@ nav ul li:hover{
   display: block;
 } */
 
-.nav-right ul li{
-    padding: 0 3rem;
-    border-right: 1px solid white;
+#bootstrap-overrides .nav-right ul li {
+  padding: 0 3rem;
+  border-right: 1px solid white;
 }
-.nav-right ul li a{
-    margin-right: .3rem;
-}
-
-.nav-right ul li:nth-child(1){
-    border-left: 1px solid white;
+#bootstrap-overrides .nav-right ul li a {
+  margin-right: 0.3rem;
 }
 
-.nav-right ul li:last-child{
-    border-right: none;
+#bootstrap-overrides .nav-right ul li:nth-child(1) {
+  border-left: 1px solid white;
 }
 
-.nav-right i{
-    font-size: medium;
+#bootstrap-overrides .nav-right ul li:last-child {
+  border-right: none;
 }
 
-.nav-right i:first-child{
-    margin-right: 0;
+#bootstrap-overrides .nav-right i {
+  font-size: medium;
 }
 
-.main{
-    position: absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+#bootstrap-overrides .nav-right i:first-child {
+  margin-right: 0;
 }
 
-.tone-1{
-    background-color: #f7f7f6;
-    height: 100vh;
-    flex: 1;
+#bootstrap-overrides .main {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.tone-2{
-    height: 100vh;
-    flex: 1;
-    position: relative;
+#bootstrap-overrides .tone-1 {
+  background-color: #f7f7f6;
+  margin-top: 20px;
+  height: 75vh;
+  flex: 1;
 }
 
-.tone-2 img{
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
+#bootstrap-overrides .tone-2 {
+  height: 75vh;
+  margin-top: 0;
+  flex: 1;
+  position: relative;
 }
 
-.product-info{
-    display: flex;
-    width: 90%;
-    height: 100%;
-    color: green;
-    margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#bootstrap-overrides .tone-2 img {
+  height: 100vh;
+  width: 100%;
+  object-fit: contain;
+}
+/* #bootstrap-overrides .carousel-inner > .carousel-item > img {
+  width: 600px;
+  height: 360px;
+} */
+
+#bootstrap-overrides .product-info {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  color: green;
+  margin: 10% auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.product-info h1{
-    font-size: 5rem;
-    font-family: fantasy;
-    letter-spacing: 3px;
-    margin-right: -3px;
-    font-weight: 100;
-    margin-bottom: 1rem;
-    text-align: center;
+#bootstrap-overrides .product-info h1 {
+  font-size: 5rem;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.product-info p{
-    font-size: 1.8rem;
-    margin-bottom: 4rem;
+#bootstrap-overrides .product-info p {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
 }
 
-.btn{
-    display: flex;
-    padding: 2rem;
-    color: #f7f7f6;
+#bootstrap-overrides .btn {
+  display: flex;
+  padding: 2rem;
+  color: #f7f7f6;
+  font-size: 1.5rem;
+  font-weight: 900;
+  transition: all 0.5s;
+}
+
+#bootstrap-overrides .info-btns {
+  display: flex;
+}
+
+#bootstrap-overrides .cart-btn {
+  background-color: green;
+}
+
+#bootstrap-overrides .discover-btn:hover,
+#bootstrap-overrides .cart-btn:hover {
+  box-shadow: 3px 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-1rem);
+}
+
+@media screen and (max-width: 1200px) {
+  #bootstrap-overrides .tone-2 img {
+    left: -8rem;
+  }
+
+  #bootstrap-overrides .product-info h1 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #bootstrap-overrides .product-info p {
     font-size: 1.5rem;
-    font-weight: 900;
-    transition: all .5s;
+    margin-bottom: 2rem;
+  }
+
+  #bootstrap-overrides .btn {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
 }
 
-.info-btns{
+@media screen and (max-width: 900px) {
+  #bootstrap-overrides .logo {
+    padding-left: 1.5rem;
+  }
+
+  #bootstrap-overrides nav ul {
+    height: 5rem;
+    font-size: 1.4rem;
+  }
+
+  #bootstrap-overrides nav ul li {
+    padding: 0 1.5rem;
+    line-height: 5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #bootstrap-overrides .product-info p {
+    font-size: 1.2rem;
+  }
+
+  #bootstrap-overrides .btn {
+    padding: 1rem;
+  }
+
+  #bootstrap-overrides nav {
     display: flex;
-}
-
-.cart-btn{
+    border-bottom: none;
+    flex-direction: column;
+    width: 25rem;
+    height: 100vh;
     background-color: green;
+    justify-content: space-evenly;
+    transform: translateX(-25rem);
+    transition: transform 0.5s;
+  }
+
+  #bootstrap-overrides nav ul {
+    height: initial;
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  #bootstrap-overrides nav ul li {
+    padding: 0;
+    color: white;
+    line-height: initial;
+    margin-bottom: 2rem;
+  }
+
+  #bootstrap-overrides .logo {
+    padding: 0;
+  }
+
+  #bootstrap-overrides .nav-right ul li,
+  #bootstrap-overrides .nav-right ul li:first-child(1) {
+    border: none;
+  }
+
+  #bootstrap-overrides .menu-toggle {
+    display: flex;
+  }
+
+  #bootstrap-overrides .fa-times {
+    display: block;
+    position: absolute;
+    color: white;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  #bootstrap-overrides .active {
+    transform: translateX(0);
+  }
+
+  #bootstrap-overrides .overlay {
+    position: absolute;
+    width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  #bootstrap-overrides .overlay.menu-open {
+    width: 100%;
+    opacity: 1;
+  }
 }
 
-.discover-btn:hover, .cart-btn:hover{
-    box-shadow: 3px 1rem 2rem rgba(0, 0, 0, .3);
-    transform: translateY(-1rem);
-}
+@media screen and (max-width: 400px) {
+  #bootstrap-overrides .product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 
-@media screen and (max-width:1200px) {
-    .tone-2 img{
-        left: -8rem;
-    }
+  #bootstrap-overrides .product-info p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
 
-    .product-info h1{
-        font-size: 3.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .product-info p{
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .btn{
-        padding: 1.5rem;
-        font-size: 1rem;
-    }
-}
-
-@media screen and (max-width:900px) {
-    .logo{
-        padding-left: 1.5rem;
-    }
-
-    nav ul{
-        height: 5rem;
-        font-size: 1.4rem;
-    }
-
-    nav ul li{
-        padding: 0 1.5rem;
-        line-height: 5rem;
-    }
-}
-
-@media screen and (max-width:600px) {
-
-    .product-info p{
-        font-size: 1.2rem;
-    }
-
-    .btn{
-        padding: 1rem;
-    }
-
-    nav{
-        display: flex;
-        border-bottom: none;
-        flex-direction: column;
-        width: 25rem;
-        height: 100vh;
-        background-color: green;
-        justify-content: space-evenly;
-        transform: translateX(-25rem);
-        transition: transform .5s ;
-    }
-
-    nav ul{
-        height: initial;
-        display: block;
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    nav ul li{
-        padding: 0;
-        color: white;
-        line-height: initial;
-        margin-bottom: 2rem;
-    }
-
-    .logo{
-        padding: 0;
-    }
-
-    .nav-right ul li, .nav-right ul li:first-child(1){
-        border: none;
-    }
-
-    .menu-toggle{
-        display: flex;
-    }
-
-    .fa-times{
-        display: block;
-        position: absolute;
-        color: white;
-        top: 2rem;
-        right: 2rem;
-    }
-
-    .active{
-        transform: translateX(0);
-    }
-
-    .overlay{
-        position: absolute;
-        width: 0;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, .8);
-        z-index: 998;
-        opacity: 0;
-        transition: opacity .5s;
-    }
-
-    .overlay.menu-open{
-        width: 100%;
-        opacity: 1;
-    }
-}
-
-@media screen and (max-width:400px) {
-
-    .product-info h1{
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    .product-info p{
-        font-size: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .btn{
-        padding: .7rem;
-        font-size: .8rem;
-    }
+  #bootstrap-overrides .btn {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
 }
