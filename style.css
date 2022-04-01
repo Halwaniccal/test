@@ -283,7 +283,7 @@ header {
 }
 
 #bootstrap-overrides .tone-2 img {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   object-fit: contain;
 }
